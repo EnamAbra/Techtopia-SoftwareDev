@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Validator</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <h2>Login Form</h2>
+    <input id="email" type="text" placeholder="Enter email" /><br /><br />
+    <input
+      id="password"
+      type="password"
+      placeholder="Enter password"
+    /><br /><br />
+    <button onclick="validate()">Login</button>
+    <p id="message"></p>
+
+    <script>
+      function validate() {
+        let email = document.getElementById("email").value.trim().toLowerCase();
+        let password = document.getElementById("password").value;
+        let message = document.getElementById("message");
+
+        if (!email.includes("@") || !email.includes(".")) {
+          message.innerText = "Invalid email format!";
+          return;
+        }
+
+        if (password.length < 8) {
+          message.innerText = "Password must be at least 8 characters!";
+          return;
+        }
+
+        if (password.includes(" ")) {
+          message.innerText = "Password should not contain spaces!";
+          return;
+        }
+
+        message.innerText = `Welcome, ${email.split("@")[0]}!`;
+      }
+    </script>
+  </body>
+</html>
