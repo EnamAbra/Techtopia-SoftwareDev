@@ -1,4 +1,7 @@
-fetchMall();
+const button = document.getElementById("loadBtn");
+const rankSelect = document.getElementById("rankSelect");
+const list = document.getElementById("mallList");
+
 async function fetchMall() {
   try {
     const response = await fetch("https://mall-api-l6c2.onrender.com/malls");
@@ -9,6 +12,7 @@ async function fetchMall() {
     const data = await response.json();
     console.log(data);
     const rank = document.getElementById("rankSelect");
+
     //this part is so that we're able to select another option because if premium is the default and you select it ,due to the evnt listener used it doesn't change event so no new result would show
     const defaultOption = document.createElement("option");
     defaultOption.value = "";
@@ -29,13 +33,12 @@ async function fetchMall() {
       }
     });
 
-    rank.addEventListener("change", (e) => {
+    button.addEventListener("click", () => {
       //the trim is to account for any differences in space with how the options are pelt in the api
-      const selectedValue = e.target.value.trim().toLowerCase();
-
-      const list = document.getElementById("mallList");
+      const selectedValue = rank.value.trim().toLowerCase();
 
       list.innerHTML = "";
+
       console.log("Selected value:", selectedValue);
       const filteredMalls = data.filter(
         (mall) =>
@@ -53,3 +56,4 @@ async function fetchMall() {
     console.error(error);
   }
 }
+fetchMall();

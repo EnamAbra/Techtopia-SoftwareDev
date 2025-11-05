@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+.section {
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  align-items: center;
+}
+select {
+  margin-right: 10px;
+  font-style: italic;
+  border-radius: 5px;
+}
+button {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #648b59;
+  margin-right: 10px;
+  margin-left: 26px;
+  font-style: oblique;
+  background: #648b59;
+}
+button:hover {
+  background: #4e6d45;
+  color: white;
+}
+#mallList {
+  list-style-type: none;
+  padding: 0;
+}
+#mallList li {
+  background: white;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
