@@ -49,7 +49,7 @@ async function fetchMall() {
           mall.rank.trim().toLowerCase() === selectedValue.trim().toLowerCase()
       );
       console.log("filtered malls", filteredMalls);
-      
+
       button.textContent = "Loading...";
       button.disabled = true;
       await new Promise((resolve) => setTimeout(resolve, 2000));

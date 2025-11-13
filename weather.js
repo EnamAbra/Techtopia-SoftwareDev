@@ -22,12 +22,11 @@ fetch(
       const [year, month, dayNum] = daysArray[i].split("-");
       const date = new Date(Number(year), Number(month) - 1, Number(dayNum));
 
-      // Format: Thursday, Nov 13
       const options = { weekday: "long", month: "short", day: "numeric" };
       const formattedDate = date.toLocaleDateString("en-US", options);
 
       day.innerHTML = `
-         <h3>${date.toLocaleDateString(undefined, options)}</h3>;
+         <h3>${date.toLocaleDateString(undefined, options)}</h3>
 
   <p>Max: ${maxTemps[i]}°C</p>
   <p>Min: ${minTemps[i]}°C</p>`;
