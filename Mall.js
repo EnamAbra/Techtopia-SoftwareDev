@@ -34,7 +34,7 @@ async function fetchMall() {
     });
 
     button.addEventListener("click", async () => {
-      //the trim is to account for any differences in space with how the options are pelt in the api
+      //the trim is to account for any differences in space with how the options are spelt in the api
       const selectedValue = rank.value.trim().toLowerCase();
       if (!selectedValue) {
         alert("Please select a class first.");
@@ -49,7 +49,7 @@ async function fetchMall() {
           mall.rank.trim().toLowerCase() === selectedValue.trim().toLowerCase()
       );
       console.log("filtered malls", filteredMalls);
-
+      
       button.textContent = "Loading...";
       button.disabled = true;
       await new Promise((resolve) => setTimeout(resolve, 2000));

@@ -3,19 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ghana Mall Finder</title>
-    <link rel="stylesheet" href="./Mall.css" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="weather.css" />
   </head>
   <body>
-    <h1>Ghana Mall Finder</h1>
-    <div class="section">
-      <label for="">Class:</label>
-
-      <select id="rankSelect"></select>
-      <button id="loadBtn">Load Malls</button>
-
-      <ul id="mallList"></ul>
+    <h2>Current Weather - Oyibi, Ghana</h2>
+    <div class="weather-card">
+      <div class="weather-info">
+        <div class="weekly-forecast">
+          <h2>7-Day Forecast</h2>
+          <div id="forecast" class="forecast-container">
+            <!-- Forecast days will be inserted here by JS -->
+          </div>
+        </div>
+      </div>
     </div>
-    <script src="./Mall.js"></script>
+
+    <script src="weather.js"></script>
   </body>
 </html>
